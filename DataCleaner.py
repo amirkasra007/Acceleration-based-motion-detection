@@ -1,10 +1,8 @@
-# -*- coding: utf-8 -*-
 """
 Created on Tue Dec 20 18:36:03 2022
 
-@author: 49151
+@author: Amirkasra007
 """
-
 import pandas as pd
 import numpy as np
 
@@ -26,8 +24,8 @@ def cleaner(i):
     return df1
 
 ##One-time use###
-# for i in range(1600,1614,1):
-#     cleaner(i)
+for i in range(1600,1614,1):
+    cleaner(i)
 
 
 def remove_semicolon(j):
@@ -36,7 +34,6 @@ def remove_semicolon(j):
     Converting their type from strinng to numpy
     
     """
-    
     df = pd.read_csv('data_' + str(j)+ '_accel_phone.csv')
     
     for i in range(len(df.iloc[:,-1])):
@@ -46,7 +43,6 @@ def remove_semicolon(j):
         
     df.to_csv('data_' + str(j)+ '_accel_phone.csv', index=False)
     return df
-
 
 #One-time use###
 for i in range(1600,1614,1):
